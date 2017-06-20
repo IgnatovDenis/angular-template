@@ -1,0 +1,27 @@
+<!-- Nav tabs -->
+<h1  *ngIf="!works.lentgh">{{title}}</h1>
+<form action="" class="add-tab" (submit)='create(titleInput.value)'>
+  <div class="row">
+    <div class="col-xs-6">
+      <input type="text" class="form-control" placeholder="title" #titleInput>
+    </div>
+    <div class="col-xs-6">
+        <input type="text" class="form-control" placeholder="description">
+    </div>
+    <button type="submit">Добавить</button>
+  </div>
+</form>
+<div class="list-works" *ngFor="let work of works; let i = index">
+  <h2>{{i}} - {{work.title}} -{{ work.description}}</h2>
+</div>
+<ul class="nav nav-tabs">
+  <li  *ngFor="let work of works; let i = index;" [class.active]="!i">
+    <a href="#work{{i}}" data-toggle="tab" (click)="delete(work)">{{work.title}} - {{work.comlete}}</a></li>
+</ul>
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div *ngFor="let work of works; let i = index" class="tab-pane" id="work{{i}}"  [class.active]="!i">
+    {{work.description}}
+  </div>
+</div>

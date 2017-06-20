@@ -1,0 +1,29 @@
+{
+  "name": "template",
+  "version": "0.0.1",
+  "description": "template",
+  "main": "",
+  "keywords": [
+    "jquery",
+    "awesome",
+    "yay"
+  ],
+  "authors": [
+    "Denis Ignatov <designid@mail.ru>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/IgnatovDenis",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "bootstrap":"*",
+    "jade-bootstrap":"*"
+
+  }
+}
